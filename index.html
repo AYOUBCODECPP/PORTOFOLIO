@@ -553,7 +553,13 @@
 
         <!-- Colonne Droite : Formulaire Moderne avec Effet Glassmorphism -->
         <div class="contact-form-panel">
-          <form class="glass-form" id="contactForm">
+          <form class="glass-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Configuration Web3Forms -->
+            <input type="hidden" name="access_key" value="dd97ddce-aa33-49c0-a410-970c0e0871f1">
+            <input type="hidden" name="subject" value="Nouveau message reçu depuis votre Portfolio — Ayoub Boulahdoub">
+            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+            <!-- Protection Anti-Spam (Honeypot) -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
             <div class="form-inputs-wrap">
               <div class="form-row">

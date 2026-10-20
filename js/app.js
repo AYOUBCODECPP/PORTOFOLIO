@@ -211,61 +211,90 @@
     });
   }
 
-  /* ── 4. Formulaire de Contact avec Rétroaction Instantanée ──────────────── */
+  /* ── 4. Formulaire de Contact avec Web3Forms (Envoi d'e-mail Réel & Gratuit) ─ */
   const contactForm = document.getElementById('contactForm');
   const formFeedback = document.getElementById('formFeedback');
   const submitBtn = document.getElementById('submitBtn');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('formName').value.trim();
-      const email = document.getElementById('formEmail').value.trim();
-      const phone = document.getElementById('formPhone').value.trim();
-      const company = document.getElementById('formCompany').value.trim();
-      const message = document.getElementById('formMessage').value.trim();
+      const nameInput = document.getElementById('formName');
+      const emailInput = document.getElementById('formEmail');
+      const messageInput = document.getElementById('formMessage');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
 
       if (!name || !email || !message) {
         if (formFeedback) {
           formFeedback.className = 'form-feedback error';
-          formFeedback.textContent = 'Veuillez remplir tous les champs obligatoires (Nom, Email, Message).';
+          formFeedback.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Veuillez remplir tous les champs obligatoires (Nom, Email, Message).';
           formFeedback.style.display = 'block';
         }
         return;
       }
 
-      // Animation bouton en cours d'envoi
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...';
+      // Masquer les messages d'état précédents
+      if (formFeedback) {
+        formFeedback.style.display = 'none';
       }
 
-      setTimeout(() => {
-        // Préparation du mailto direct de secours
-        const subject = encodeURIComponent(`Nouveau contact portfolio — ${name} (${company || 'Sans entreprise'})`);
-        const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nEntreprise: ${company}\n\nMessage:\n${message}`);
-        const mailtoLink = `mailto:ayoub1999boulahdoub@gmail.com?subject=${subject}&body=${body}`;
+      // État de chargement du bouton
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Envoi en cours...</span>';
+      }
 
+      try {
+        const formData = new FormData(contactForm);
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          if (formFeedback) {
+            formFeedback.className = 'form-feedback success';
+            formFeedback.innerHTML = `
+              <i class="fa-solid fa-circle-check"></i> Merci <strong>${name}</strong> ! Votre message a bien été envoyé avec succès.<br>
+              <span style="font-size:0.8rem; opacity:0.9;">Un e-mail de notification a été transmis directement à Ayoub.</span>
+            `;
+            formFeedback.style.display = 'block';
+          }
+
+          contactForm.reset();
+
+          if (submitBtn) {
+            submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Message Envoyé !</span>';
+          }
+        } else {
+          throw new Error(result.message || "Erreur lors de l'envoi");
+        }
+      } catch (error) {
         if (formFeedback) {
-          formFeedback.className = 'form-feedback success';
+          formFeedback.className = 'form-feedback error';
           formFeedback.innerHTML = `
-            <i class="fa-solid fa-circle-check"></i> Merci <strong>${name}</strong> ! Votre message a bien été préparé.<br>
-            <a href="${mailtoLink}" style="color:#6ee7b7; text-decoration:underline; font-weight:700; margin-top:4px; display:inline-block;">Cliquez ici pour finaliser l'envoi direct par votre boîte mail</a>
+            <i class="fa-solid fa-triangle-exclamation"></i> Une erreur s'est produite lors de l'envoi.<br>
+            Vous pouvez également m'écrire directement par e-mail à : 
+            <a href="mailto:ayoub1999boulahdoub@gmail.com" style="color:#ffffff; text-decoration:underline; font-weight:700;">ayoub1999boulahdoub@gmail.com</a>
           `;
           formFeedback.style.display = 'block';
         }
-
-        contactForm.reset();
-
+      } finally {
         if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Message Prêt !';
           setTimeout(() => {
-            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>Envoyer le message</span>';
-          }, 4000);
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML || '<i class="fa-solid fa-paper-plane"></i> <span>Envoyer le message</span>';
+          }, 4500);
         }
-      }, 700);
+      }
     });
   }
 
