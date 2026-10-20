@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayoub Boulahdoub | Développeur Web Full Stack</title>
+  <meta name="description" content="Portfolio d'Ayoub Boulahdoub — Développeur Web Full Stack spécialisé en React, JavaScript, PHP, MySQL et Tailwind CSS. Découvrez mes projets, compétences et contactez-moi.">
+  <meta name="author" content="Ayoub Boulahdoub">
+  <meta property="og:title" content="Ayoub Boulahdoub | Développeur Web Full Stack">
+  <meta property="og:description" content="Développeur Web Full Stack — Découvrez mes réalisations (Serenda E-Commerce, Drive Master), compétences et contactez-moi.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+  <!-- ══ Fond Dégradé d'Ambiance ══ -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-middle" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- ══ Barre de Navigation Supérieure ══ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Logo / Titre Métier -->
+      <a href="#hero" class="brand-link">
+        <span class="brand-badge">AB</span>
+        <div class="brand-meta">
+          <span class="brand-name">Ayoub Boulahdoub</span>
+          <span class="brand-role">Développeur Full Stack</span>
+        </div>
+      </a>
+
+      <!-- Liens de Navigation -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#hero" class="nav-link active">Accueil</a>
+        <a href="#about" class="nav-link">À Propos</a>
+        <a href="#skills" class="nav-link">Compétences</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#testimonials" class="nav-link">Témoignages</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Bouton d'action droite (Hire Me) -->
+      <div class="header-actions">
+        <a href="#contact" class="btn-hire-me" id="headerContactBtn">
+          <span>Me Contacter</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ══ Section 1 : Hero ══ -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+
+      <!-- Colonne Texte -->
+      <div class="hero-content">
+        <span class="hero-greeting">Bonjour, je suis</span>
+        <h1 class="hero-title">
+          Ayoub <span class="gradient-text">Boulahdoub</span>
+        </h1>
+        <p class="hero-description">
+          Développeur Web Full Stack diplômé ITIAM. Je conçois et déploie des applications web modernes, robustes et performantes en utilisant <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>React</strong>, <strong>PHP</strong> et <strong>MySQL</strong>. Code propre, architectures maintenables et interfaces centrées sur l'utilisateur.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-pill btn-primary-gradient">
+            <i class="fa-solid fa-rocket"></i> Voir mes projets
+          </a>
+          <a href="#contact" class="btn-pill btn-outline-glow">
+            <i class="fa-solid fa-handshake"></i> Collaborer ensemble
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Engagement & Qualité</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-number">Full Stack</span>
+            <span class="stat-label">Frontend & Backend</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-number">En Ligne</span>
+            <span class="stat-label">Projets Déployés</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne Photo avec Orbe Lumineux et Badges Orbitaux -->
+      <div class="hero-visual">
+        <div class="avatar-glow-orb">
+          <div class="orb-pulse-ring"></div>
+          <div class="avatar-circle">
+            <img src="assets/PERSONALIMG.jpg" alt="Ayoub Boulahdoub" class="avatar-img">
+          </div>
+
+          <!-- Badges flottants autour de la photo -->
+          <div class="floating-badge badge-react" title="React UI">
+            <i class="fa-brands fa-react spin-icon"></i>
+          </div>
+          <div class="floating-badge badge-js" title="JavaScript ES6+">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <div class="floating-badge badge-php" title="PHP Backend">
+            <i class="fa-brands fa-php"></i>
+          </div>
+          <div class="floating-badge badge-sql" title="MySQL Database">
+            <i class="fa-solid fa-database"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Section 2 : À Propos de Moi (About Me) ══ -->
+  <section class="about-section" id="about">
+    <div class="container about-container">
+
+      <!-- Carte Photo à Gauche -->
+      <div class="about-visual">
+        <div class="about-image-card">
+          <img src="assets/PERSONALIMG.jpg" alt="Ayoub Boulahdoub Développeur" class="about-img">
+          <div class="about-card-overlay">
+            <div class="about-badge-status">
+              <span class="status-dot"></span>
+              <span>Disponible pour nouveaux projets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenu Texte à Droite -->
+      <div class="about-content">
+        <span class="section-tag">Qui suis-je ?</span>
+        <h2 class="section-title">À Propos de Moi</h2>
+
+        <p class="about-paragraph">
+          Je suis un <strong>Développeur Web Full Stack</strong> passionné par la résolution de problèmes et la création d'expériences numériques immersives. Mon objectif est de transformer des idées complexes en applications web intuitives, ergonomiques et techniquement irréprochables.
+        </p>
+
+        <p class="about-paragraph">
+          Titulaire du diplôme de <strong>Technicien Spécialisé en Développement Informatique</strong> de l'ITIAM, mon cursus m'a apporté des bases solides en algorithmique, en programmation orientée objet (C++, C#, Java), ainsi qu'en conception de bases de données relationnelles et architectures MVC en PHP/MySQL.
+        </p>
+
+        <p class="about-paragraph">
+          Toujours en veille technologique, j'applique les standards modernes du web (Single Page Applications avec React, styling utilitaire avec Tailwind CSS, API REST et optimisations SEO). Rigoureux, autonome et orienté résultats, je m'adapte rapidement aux besoins spécifiques de chaque projet.
+        </p>
+
+        <div class="about-cta-row">
+          <a href="assets/CV_Ayoub_Boulahdoub.pdf" download="CV_Ayoub_Boulahdoub.pdf" class="btn-pill btn-primary-gradient" id="aboutDlCvBtn">
+            <i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV (PDF)
+          </a>
+          <a href="https://github.com/AYOUBCODECPP" target="_blank" rel="noopener noreferrer" class="btn-pill btn-secondary-dark">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/ayoub-boulahdoub-302062293" target="_blank" rel="noopener noreferrer" class="btn-pill btn-secondary-dark">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Section 3 : Compétences & Technologies ══ -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+
+      <div class="section-header text-center">
+        <span class="section-tag">Mon Savoir-Faire</span>
+        <h2 class="section-title">Compétences & Technologies</h2>
+        <p class="section-subtitle">
+          Une boîte à outils moderne et complète pour construire des applications web rapides, responsives et maintenables.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Carte 1 : Tailwind CSS -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-tailwind">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <h3 class="skill-title">Tailwind CSS</h3>
+          <p class="skill-desc">
+            Création d'interfaces utilisateur modernes, modulaires et parfaitement responsives avec une approche utility-first propre et optimisée.
+          </p>
+        </div>
+
+        <!-- Carte 2 : JavaScript -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-js">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <h3 class="skill-title">JavaScript (ES6+)</h3>
+          <p class="skill-desc">
+            Développement de scripts performants, programmation asynchrone (Promises/Async-Await), requêtes API et manipulation dynamique du DOM.
+          </p>
+        </div>
+
+        <!-- Carte 3 : React -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-react">
+            <i class="fa-brands fa-react spin-icon"></i>
+          </div>
+          <h3 class="skill-title">React</h3>
+          <p class="skill-desc">
+            Conception d'applications Single Page (SPA) réactives basées sur des composants modulaires, hooks d'état et gestion fluide des flux de données.
+          </p>
+        </div>
+
+        <!-- Carte 4 : PHP Backend -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-php">
+            <i class="fa-brands fa-php"></i>
+          </div>
+          <h3 class="skill-title">PHP & Architecture MVC</h3>
+          <p class="skill-desc">
+            Conception de logique backend sécurisée, traitement de formulaires, sessions d'authentification et mise en place d'architectures MVC robustes.
+          </p>
+        </div>
+
+        <!-- Carte 5 : MySQL Database -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-sql">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="skill-title">MySQL & Bases de Données</h3>
+          <p class="skill-desc">
+            Modélisation relationnelle (MCD/MLD), conception de schémas relationnels, optimisation de requêtes SQL et intégrité des données.
+          </p>
+        </div>
+
+        <!-- Carte 6 : HTML5 & Sémantique -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-html">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h3 class="skill-title">HTML5 & CSS3 Moderne</h3>
+          <p class="skill-desc">
+            Balisage sémantique accessible, conformité W3C, Flexbox, CSS Grid avancée et animations fluides compatibles sur tous les navigateurs.
+          </p>
+        </div>
+
+        <!-- Carte 7 : Git & GitHub -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-git">
+            <i class="fa-brands fa-git-alt"></i>
+          </div>
+          <h3 class="skill-title">Git & GitHub</h3>
+          <p class="skill-desc">
+            Gestion rigoureuse des versions de code, branching, commits conventionnels et hébergement de projets open-source.
+          </p>
+        </div>
+
+        <!-- Carte 8 : Outils Modernes & Build -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap icon-vite">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="skill-title">Vite & Outils Dev</h3>
+          <p class="skill-desc">
+            Environnements de développement rapides, bundling moderne, packaging et déploiement continu sur des plateformes comme Vercel.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Section 4 : Mes Projets (Projects Showcase) ══ -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+
+      <div class="section-header text-center">
+        <span class="section-tag">Portfolio de Réalisations</span>
+        <h2 class="section-title">Mes Projets</h2>
+        <p class="section-subtitle">
+          Applications et plateformes web concrètes développées pour des clients réels et dans le cadre de projets full stack.
+        </p>
+      </div>
+
+      <!-- Filtres de Catégories -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Tous les projets</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack & Web Apps</button>
+      </div>
+
+      <!-- Grille des Projets (Extensible via js/projects-data.js) -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- ── PROJET 1 : SERENDA (Boutique de vêtements féminins) ── -->
+        <article class="project-card" data-category="ecommerce">
+          <div class="project-media">
+            <img src="assets/serenda_preview.jpg" alt="Boutique Serenda Vêtements Femmes" class="project-img">
+            <div class="project-badges">
+              <span class="p-badge client"><i class="fa-solid fa-check"></i> Client Réel</span>
+              <span class="p-badge category">E-Commerce</span>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">Serenda — Boutique Vêtements Femmes</h3>
+            <p class="project-description">
+              Boutique en ligne moderne conçue sur mesure pour un client spécialisé dans le prêt-à-porter féminin. Intégration d'un catalogue dynamique, panier d'achat fluide, processus de commande rapide et interface mobile-first optimisée pour la conversion commerciale.
+            </p>
+
+            <div class="project-tags">
+              <span class="ptag">E-Commerce</span>
+              <span class="ptag">JavaScript</span>
+              <span class="ptag">HTML5/CSS3</span>
+              <span class="ptag">UI/UX</span>
+              <span class="ptag">Mobile First</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://serenda.youcan.store/" target="_blank" rel="noopener noreferrer" class="btn-card-primary" title="Visiter la boutique Serenda">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
+              </a>
+              <button class="btn-card-secondary open-project-modal" data-project="serenda" title="Détails du projet">
+                <i class="fa-solid fa-circle-info"></i> Détails
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJET 2 : DRIVE MASTER (Plateforme Auto-École & Code) ── -->
+        <article class="project-card" data-category="fullstack">
+          <div class="project-media">
+            <img src="assets/drive_master_preview.jpg" alt="Drive Master Plateforme Permis" class="project-img">
+            <div class="project-badges">
+              <span class="p-badge live"><span class="blink-dot"></span> En Ligne</span>
+              <span class="p-badge category">Web App</span>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">Drive Master — Gestion & Permis de Conduire</h3>
+            <p class="project-description">
+              Plateforme interactive complète d'entraînement et de préparation aux épreuves du code de la route et gestion d'auto-école. Séries de questions officielles chronométrées, correction détaillée instantanée, suivi des scores et ergonomie moderne développée avec React et Tailwind CSS.
+            </p>
+
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">Vite</span>
+              <span class="ptag">Tailwind CSS</span>
+              <span class="ptag">PHP</span>
+              <span class="ptag">MySQL</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://front-end-drive-master.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-primary" title="Visiter Drive Master en ligne">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site
+              </a>
+              <a href="https://github.com/AYOUBCODECPP" target="_blank" rel="noopener noreferrer" class="btn-card-secondary" title="Consulter le code sur GitHub">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJET 3 : BOUTIQUE E-COMMERCE MODULAIRE ── -->
+        <article class="project-card" data-category="ecommerce">
+          <div class="project-media">
+            <img src="assets/serenda_preview.jpg" alt="Plateforme E-Commerce Modulaire PHP" class="project-img">
+            <div class="project-badges">
+              <span class="p-badge done"><i class="fa-solid fa-code"></i> Réalisé</span>
+              <span class="p-badge category">PHP / MySQL</span>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">Plateforme E-Commerce Modulaire</h3>
+            <p class="project-description">
+              Application web e-commerce complète avec gestion des catégories, panier persistant, espace d'administration sécurisé pour la gestion des stocks, des commandes et des clients. Architecture modulaire basée sur le modèle MVC.
+            </p>
+
+            <div class="project-tags">
+              <span class="ptag">PHP</span>
+              <span class="ptag">MySQL</span>
+              <span class="ptag">Architecture MVC</span>
+              <span class="ptag">JavaScript</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/AYOUBCODECPP" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
+                <i class="fa-brands fa-github"></i> Voir sur GitHub
+              </a>
+              <button class="btn-card-secondary open-project-modal" data-project="ecommerce-php">
+                <i class="fa-solid fa-circle-info"></i> Détails
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+
+      <!-- Carte d'ajout ou d'exploration GitHub (Extensibilité) -->
+      <div class="projects-extra-box">
+        <div class="peb-content">
+          <div class="peb-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="peb-text">
+            <h4>D'autres projets en cours de développement</h4>
+            <p>Mon espace GitHub contient mes projets open-source, algorithmes et expérimentations continues.</p>
+          </div>
+        </div>
+        <a href="https://github.com/AYOUBCODECPP" target="_blank" rel="noopener noreferrer" class="btn-pill btn-primary-gradient">
+          <i class="fa-brands fa-github"></i> Explorer mon GitHub
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Section 5 : Témoignages (Testimonials) ══ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+
+      <div class="section-header text-center">
+        <span class="section-tag">Avis & Recommandations</span>
+        <h2 class="section-title">Témoignages</h2>
+        <p class="section-subtitle">
+          Retours d'expérience de clients et partenaires qui m'ont fait confiance pour leurs solutions web.
+        </p>
+      </div>
+
+      <!-- Carousel Témoignage -->
+      <div class="testimonial-slider-wrap">
+        <button class="slider-btn prev" id="sliderPrev" aria-label="Témoignage précédent">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="testimonial-card" id="testimonialCard">
+          <div class="stars-row">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="testimonial-quote" id="testimonialQuote">
+            « Ayoub a fait preuve d'une excellente écoute et d'une grande rigueur dans le développement de la boutique Serenda. Le design est très soigné, la navigation fluide et le panier d'achat fonctionne sans accroc. Nos clientes adorent la rapidité du site ! »
+          </p>
+
+          <div class="testimonial-author-meta">
+            <strong class="author-name" id="testimonialAuthor">Client Propriétaire — Serenda</strong>
+            <span class="author-title" id="testimonialRole">Boutique de Mode Féminine • 2025</span>
+          </div>
+        </div>
+
+        <button class="slider-btn next" id="sliderNext" aria-label="Témoignage suivant">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Indicateurs de points du slider -->
+      <div class="slider-dots" id="sliderDots">
+        <span class="sdot active" data-index="0"></span>
+        <span class="sdot" data-index="1"></span>
+        <span class="sdot" data-index="2"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Section 6 : Contact Us (Get in touch today) ══ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+
+      <div class="section-header text-center">
+        <span class="section-tag">Restons Connectés</span>
+        <h2 class="section-title">Contactez-Moi</h2>
+        <p class="section-subtitle">
+          Un projet à concrétiser, une proposition de collaboration ou une opportunité d'emploi ? Parlons-en dès aujourd'hui.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- Colonne Gauche : Coordonnées (Get in touch today) -->
+        <div class="contact-info-panel">
+          <div class="contact-info-card">
+            <div class="info-card-top">
+              <h3 class="panel-heading">Prendre contact aujourd'hui</h3>
+              <p class="panel-intro">
+                Je suis toujours disponible pour discuter de nouveaux projets, échanger sur des architectures web modernes ou intégrer une équipe ambitieuse.
+              </p>
+            </div>
+
+            <div class="contact-channels">
+              <a href="mailto:ayoub1999boulahdoub@gmail.com" class="channel-item" title="Envoyer un email">
+                <div class="ch-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="ch-text">
+                  <span class="ch-label">Email Direct</span>
+                  <strong class="ch-val">ayoub1999boulahdoub@gmail.com</strong>
+                </div>
+              </a>
+
+              <a href="tel:+212651359159" class="channel-item" title="Appeler directement">
+                <div class="ch-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="ch-text">
+                  <span class="ch-label">Téléphone / WhatsApp</span>
+                  <strong class="ch-val">+212 651359159</strong>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/ayoub-boulahdoub-302062293" target="_blank" rel="noopener noreferrer" class="channel-item" title="LinkedIn">
+                <div class="ch-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="ch-text">
+                  <span class="ch-label">LinkedIn</span>
+                  <strong class="ch-val">Ayoub Boulahdoub</strong>
+                </div>
+              </a>
+
+              <a href="https://github.com/AYOUBCODECPP" target="_blank" rel="noopener noreferrer" class="channel-item" title="GitHub">
+                <div class="ch-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="ch-text">
+                  <span class="ch-label">GitHub</span>
+                  <strong class="ch-val">AYOUBCODECPP</strong>
+                </div>
+              </a>
+            </div>
+
+            <div class="info-card-bottom">
+              <div class="availability-pill">
+                <span class="status-dot"></span>
+                <span>Disponible immédiatement (Télétravail & Présentiel)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colonne Droite : Formulaire Moderne avec Effet Glassmorphism -->
+        <div class="contact-form-panel">
+          <form class="glass-form" id="contactForm">
+
+            <div class="form-inputs-wrap">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formName" class="form-label">Nom complet</label>
+                  <input type="text" id="formName" name="name" class="form-input" placeholder="Votre nom" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="formEmail" class="form-label">Adresse Email</label>
+                  <input type="email" id="formEmail" name="email" class="form-input" placeholder="exemple@domaine.com" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formPhone" class="form-label">Téléphone</label>
+                  <input type="tel" id="formPhone" name="phone" class="form-input" placeholder="+212 ...">
+                </div>
+
+                <div class="form-group">
+                  <label for="formCompany" class="form-label">Entreprise / Sujet</label>
+                  <input type="text" id="formCompany" name="company" class="form-input" placeholder="Nom de l'entreprise ou sujet">
+                </div>
+              </div>
+
+              <div class="form-group form-group-message">
+                <label for="formMessage" class="form-label">Votre Message</label>
+                <textarea id="formMessage" name="message" class="form-textarea" placeholder="Décrivez votre projet, vos besoins ou vos questions..." required></textarea>
+              </div>
+            </div>
+
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn-submit-gradient" id="submitBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Envoyer le message</span>
+              </button>
+              <div class="form-feedback" id="formFeedback" style="display:none;"></div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Footer ══ -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+
+      <div class="footer-left">
+        <a href="#hero" class="footer-brand">
+          <span class="brand-badge mini">AB</span>
+          <span class="footer-brand-text">Ayoub Boulahdoub</span>
+        </a>
+        <p class="footer-tagline">Développeur Web Full Stack • Turning Ideas into Digital Experiences</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Accueil</a>
+        <a href="#about">À Propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/AYOUBCODECPP" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ayoub-boulahdoub-302062293" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:ayoub1999boulahdoub@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Copyright © 2026 Ayoub Boulahdoub. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Détails Projet -->
+  <div class="modal-backdrop" id="projectModal" style="display:none;" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modalBody">
+        <!-- Rempli dynamiquement -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

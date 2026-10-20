@@ -1,0 +1,86 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1570 >>
+stream
+BT
+/F1 22 Tf
+50 750 Td
+(AYOUB BOULAHDOUB) Tj
+/F1 14 Tf
+0 -26 Td
+(Developpeur Web Full Stack | Technicien Specialise en Developpement Informatique) Tj
+/F1 10 Tf
+0 -20 Td
+(Email: ayoub1999boulahdoub@gmail.com | Portfolio Web) Tj
+0 -15 Td
+(LinkedIn: in/ayoub-boulahdoub-302062293 | GitHub: AYOUBCODECPP) Tj
+0 -25 Td
+/F1 14 Tf
+(FORMATION) Tj
+/F1 10 Tf
+0 -18 Td
+(2024 - 2026 : Diplome de Technicien Specialise en Developpement Informatique) Tj
+0 -14 Td
+(             ITIAM - Institut des Technologies de l'Informatique Appliquees) Tj
+0 -14 Td
+(2019        : Baccalaureat en Sciences Physiques - Lycee Oulad Berhil) Tj
+0 -25 Td
+/F1 14 Tf
+(COMPETENCES TECHNIQUES) Tj
+/F1 10 Tf
+0 -18 Td
+(Frontend : HTML5, CSS3, JavaScript ES6+, React, Tailwind CSS, Responsive Design) Tj
+0 -14 Td
+(Backend  : PHP, MySQL, Conception Bases de Donnees, Architecture MVC, API REST) Tj
+0 -14 Td
+(Langages : C++, C#, Java, Python) Tj
+0 -14 Td
+(Outils   : Git, GitHub, VS Code, Vite, Figma) Tj
+0 -25 Td
+/F1 14 Tf
+(PROJETS MAJEURS) Tj
+/F1 10 Tf
+0 -18 Td
+(Drive Master : Plateforme Web interactive de preparation au permis de conduire) Tj
+0 -14 Td
+(               Technologies: React, Vite, Tailwind CSS, PHP, MySQL) Tj
+0 -14 Td
+(               Lien: https://front-end-drive-master.vercel.app/) Tj
+0 -18 Td
+(Boutique E-Commerce : Plateforme modulaire avec catalogue dynamique et panier) Tj
+0 -14 Td
+(                      Technologies: HTML5, CSS3, JavaScript, PHP, MySQL) Tj
+0 -25 Td
+/F1 14 Tf
+(LANGUES) Tj
+/F1 10 Tf
+0 -18 Td
+(Arabe : Langue maternelle | Francais : Courant | Anglais : Technique) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000000305 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+385
+%%EOF
