@@ -1,111 +1,71 @@
-/* Responsive adjustments for mobile devices */
+/* ==========================================================================
+   RESPONSIVE OVERRIDES — Additional mobile fixes
+   ========================================================================== */
+
+/* ── Tablet & below (≤ 768px) ── */
 @media (max-width: 768px) {
-  /* Stack hero columns vertically */
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    text-align: center;
+
+  /* Fix: Remove dark background box behind the avatar on mobile */
+  .hero-section {
+    background: transparent;
   }
-  .hero-content {
-    order: 2;
-  }
+
   .hero-visual {
-    order: 1;
-    margin-bottom: 20px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
-  .hero-title {
-    font-size: 2.4rem;
-  }
-  .hero-description {
-    font-size: 0.95rem;
-  }
+
   .avatar-glow-orb {
-    width: 260px;
-    height: 260px;
+    background: transparent;
   }
-  .avatar-circle {
-    width: 200px;
-    height: 200px;
-  }
-  .main-nav {
-    display: none;
-  }
-  .hamburger-btn {
-    display: flex !important;
-  }
-  .header-actions {
-    gap: 8px;
-  }
-  .site-header {
-    padding: 0 12px;
-  }
+
   /* Ensure avatar image is always visible */
   .avatar-img {
     display: block;
   }
-  /* Projects grid responsive */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  /* Skills grid responsive */
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  /* Testimonials responsive */
-  .testimonial-slider-wrap {
-    padding: 0 10px;
-  }
-  .testimonial-card {
-    max-width: 100%;
-  }
-  /* Contact form responsive */
-  .contact-form-panel {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  /* Stack hero columns vertically */
+
+  /* Hero container: single column */
   .hero-container {
     grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
   }
+
   .hero-content {
     order: 2;
   }
+
   .hero-visual {
     order: 1;
     margin-bottom: 20px;
   }
-  .hero-title {
-    font-size: 2.4rem;
-  }
-  .hero-description {
-    font-size: 0.95rem;
-  }
-  .avatar-glow-orb {
-    width: 260px;
-    height: 260px;
-  }
-  .avatar-circle {
-    width: 200px;
-    height: 200px;
-  }
+
+  /* Navigation mobile */
   .main-nav {
     display: none;
   }
+
   .hamburger-btn {
     display: flex !important;
   }
+
   .header-actions {
     gap: 8px;
   }
-  .site-header {
-    padding: 0 12px;
-  }
-}
 
-/* Ensure avatar image is always visible */
-.avatar-img {
-  display: block;
+  /* Projects grid: single column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skills grid: 2 columns */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact form */
+  .contact-form-panel {
+    width: 100%;
+  }
 }
