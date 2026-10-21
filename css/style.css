@@ -1548,7 +1548,13 @@ body {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
+  }
+  .hero-content {
+    order: 2;
+  }
+  .hero-visual {
+    order: 1;
   }
   .hero-description {
     margin-left: auto;
@@ -1561,8 +1567,19 @@ body {
     margin: 0 auto;
     justify-content: center;
   }
-  .hero-visual {
-    display: none;
+  .avatar-glow-orb {
+    width: 220px;
+    height: 220px;
+  }
+  .avatar-circle {
+    width: 180px;
+    height: 180px;
+  }
+  .floating-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+    border-radius: 10px;
   }
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1606,8 +1623,19 @@ body {
   .hero-section {
     padding: 40px 0 50px;
   }
-  .hero-visual {
-    display: none;
+  .avatar-glow-orb {
+    width: 200px;
+    height: 200px;
+  }
+  .avatar-circle {
+    width: 160px;
+    height: 160px;
+  }
+  .floating-badge {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+    border-radius: 10px;
   }
   .hero-greeting {
     font-size: 1rem;
@@ -1677,6 +1705,20 @@ body {
   }
   .hero-description {
     font-size: 0.88rem;
+  }
+  .avatar-glow-orb {
+    width: 170px;
+    height: 170px;
+  }
+  .avatar-circle {
+    width: 140px;
+    height: 140px;
+  }
+  .floating-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+    border-radius: 8px;
   }
   .hero-stats {
     gap: 12px;
