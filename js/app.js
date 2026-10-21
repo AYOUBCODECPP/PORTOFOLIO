@@ -322,19 +322,30 @@
     });
   });
 
-  /* ── 6. Menu Mobile Hamburger ───────────────────────────────────────────── */
+  /* ── 6. Menu Mobile / Tablette Hamburger ────────────────────────────────── */
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mainNav = document.getElementById('mainNav');
 
   if (hamburgerBtn && mainNav) {
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       mainNav.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open');
     });
 
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         mainNav.classList.remove('open');
+        hamburgerBtn.classList.remove('open');
       });
+    });
+
+    // Fermer le menu lors d'un clic à l'extérieur
+    document.addEventListener('click', (e) => {
+      if (!mainNav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        mainNav.classList.remove('open');
+        hamburgerBtn.classList.remove('open');
+      }
     });
   }
 

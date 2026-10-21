@@ -1,13 +1,13 @@
 /* ==========================================================================
-   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS — PORTFOLIO AYOUB BOULAHDOUB
+   RESPONSIVE DESIGN & TABLET / MOBILE OPTIMIZATIONS — PORTFOLIO AYOUB BOULAHDOUB
    Fixes:
-   1. Elimination of the dark/black rectangular box artifact on iOS/Android
-   2. Preservation and clean display of the animated profile avatar
-   3. Total prevention of horizontal scrolling (pulling to sides)
-   4. Perfect adaptive layout for all mobile viewports (320px - 768px)
+   1. Fix tablet & mobile navbar: responsive hamburger menu toggle for all screens ≤ 1024px
+   2. Elimination of black box artifact on iPad / tablets and mobile devices
+   3. Preserving avatar photo, glowing gradients and orbital animations
+   4. Elimination of horizontal page pulling (100% responsive without overflow)
    ========================================================================== */
 
-/* ── Prevent horizontal overflow on the entire document ── */
+/* ── Prevent horizontal overflow on entire document ── */
 html, body {
   overflow-x: hidden !important;
   width: 100% !important;
@@ -20,10 +20,12 @@ html, body {
   box-sizing: border-box;
 }
 
-/* ── Tablet & Mobile (≤ 768px) ── */
-@media (max-width: 768px) {
+/* ==========================================================================
+   1. TABLET & BELOW (≤ 1024px) — iPad Pro, iPad Air, Tablets & Small Laptops
+   ========================================================================== */
+@media (max-width: 1024px) {
 
-  /* Ambient Glows: scaled down and contained to prevent lateral scrolling & GPU bugs */
+  /* ── Ambient Background Glows: contained for tablets to prevent WebKit GPU glitch ── */
   .ambient-glow {
     max-width: 100vw !important;
     overflow: hidden !important;
@@ -31,33 +33,107 @@ html, body {
   }
 
   .glow-top {
-    width: 250px !important;
-    height: 250px !important;
-    right: -30px !important;
+    width: 320px !important;
+    height: 320px !important;
+    right: -20px !important;
     top: -20px !important;
-    filter: blur(55px) !important;
-    opacity: 0.6 !important;
+    filter: blur(60px) !important;
+    opacity: 0.65 !important;
   }
 
   .glow-middle {
-    width: 250px !important;
-    height: 250px !important;
-    left: -30px !important;
-    filter: blur(55px) !important;
-    opacity: 0.5 !important;
+    width: 320px !important;
+    height: 320px !important;
+    left: -20px !important;
+    filter: blur(60px) !important;
+    opacity: 0.55 !important;
   }
 
   .glow-bottom {
-    width: 250px !important;
-    height: 250px !important;
-    right: -30px !important;
-    filter: blur(55px) !important;
-    opacity: 0.5 !important;
+    width: 320px !important;
+    height: 320px !important;
+    right: -20px !important;
+    filter: blur(60px) !important;
+    opacity: 0.55 !important;
   }
 
-  /* ── Section Hero Mobile ── */
+  /* ── RESPONSIVE NAVBAR FOR TABLETS (≤ 1024px) ── */
+  .site-header {
+    padding: 0 20px !important;
+  }
+
+  .header-container {
+    height: 70px !important;
+    padding: 0 !important;
+  }
+
+  /* Activate hamburger button on tablets and mobile */
+  .hamburger-btn {
+    display: flex !important;
+    z-index: 1001 !important;
+  }
+
+  /* Turn hamburger into animated 'X' when open */
+  .hamburger-btn.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Main nav dropdown menu for tablet & mobile */
+  .main-nav {
+    display: none !important;
+    position: absolute !important;
+    top: 70px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: rgba(11, 15, 25, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    flex-direction: column !important;
+    padding: 24px 28px !important;
+    gap: 16px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+    z-index: 999 !important;
+  }
+
+  .main-nav.open {
+    display: flex !important;
+    animation: fadeInNav 0.25s ease forwards;
+  }
+
+  .main-nav .nav-link {
+    font-size: 1.05rem !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    width: 100% !important;
+  }
+
+  .main-nav .nav-link:last-child {
+    border-bottom: none !important;
+  }
+
+  .main-nav .nav-link.active::after {
+    display: none !important;
+  }
+
+  .main-nav .nav-link.active {
+    color: var(--accent-coral) !important;
+  }
+
+  .header-actions {
+    gap: 12px !important;
+  }
+
+  /* ── HERO SECTION & AVATAR ON TABLET (FIX BLACK BOX) ── */
   .hero-section {
-    padding: 30px 0 45px !important;
+    padding: 40px 0 60px !important;
     background: transparent !important;
     overflow: hidden !important;
     position: relative !important;
@@ -65,9 +141,8 @@ html, body {
 
   .hero-container {
     grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    gap: 30px !important;
     text-align: center !important;
-    padding: 0 16px !important;
     max-width: 100% !important;
   }
 
@@ -76,7 +151,22 @@ html, body {
     width: 100% !important;
   }
 
-  /* ── Hero Visual (Avatar Column) ── */
+  .hero-description {
+    margin: 0 auto 24px !important;
+    max-width: 620px !important;
+  }
+
+  .hero-actions {
+    justify-content: center !important;
+    margin-bottom: 30px !important;
+  }
+
+  .hero-stats {
+    margin: 0 auto !important;
+    justify-content: center !important;
+  }
+
+  /* Fix: Remove dark background box behind avatar on tablets */
   .hero-visual {
     order: 1 !important;
     display: flex !important;
@@ -85,9 +175,8 @@ html, body {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    margin: 0 auto 12px !important;
+    margin: 0 auto 16px !important;
     width: 100% !important;
-    max-width: 320px !important;
     isolation: isolate !important;
     transform: translateZ(0) !important;
     -webkit-transform: translateZ(0) !important;
@@ -95,8 +184,8 @@ html, body {
 
   .avatar-glow-orb {
     position: relative !important;
-    width: 220px !important;
-    height: 220px !important;
+    width: 250px !important;
+    height: 250px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -111,7 +200,7 @@ html, body {
 
   .orb-pulse-ring {
     position: absolute !important;
-    inset: -10px !important;
+    inset: -12px !important;
     border-radius: 50% !important;
     border: 1px dashed rgba(59, 130, 246, 0.45) !important;
     animation: spin 30s linear infinite !important;
@@ -120,12 +209,12 @@ html, body {
   }
 
   .avatar-circle {
-    width: 175px !important;
-    height: 175px !important;
+    width: 200px !important;
+    height: 200px !important;
     border-radius: 50% !important;
-    padding: 5px !important;
+    padding: 6px !important;
     background: linear-gradient(135deg, rgba(244, 63, 94, 0.9), rgba(59, 130, 246, 0.9)) !important;
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4), 0 0 35px rgba(244, 63, 94, 0.3) !important;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 0 45px rgba(244, 63, 94, 0.3) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -145,24 +234,164 @@ html, body {
     background: #0b0f19 !important;
   }
 
-  /* FIX: Floating badges on mobile use a solid sleek dark background
-     without backdrop-filter to prevent WebKit rendering black box artifact */
+  /* Fix: Disable backdrop-filter on tablet floating badges to prevent WebKit black box */
   .floating-badge {
     position: absolute !important;
-    width: 36px !important;
-    height: 36px !important;
-    border-radius: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 12px !important;
     background: #111827 !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 1rem !important;
+    font-size: 1.15rem !important;
     z-index: 3 !important;
     animation: float 4s ease-in-out infinite !important;
+  }
+
+  .badge-react {
+    top: 8px !important;
+    right: 8px !important;
+  }
+
+  .badge-js {
+    bottom: 24px !important;
+    right: 2px !important;
+  }
+
+  .badge-php {
+    bottom: 20px !important;
+    left: 4px !important;
+  }
+
+  .badge-sql {
+    top: 20px !important;
+    left: 4px !important;
+  }
+
+  /* ── Other Tablet Layouts ── */
+  .about-container {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 40px !important;
+  }
+
+  .about-visual {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-image-card {
+    max-width: 360px !important;
+    height: 420px !important;
+    margin: 0 auto !important;
+  }
+
+  .about-cta-row {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   2. MOBILE PHONES (≤ 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  /* Ambient Glows: scaled smaller for phones */
+  .glow-top {
+    width: 240px !important;
+    height: 240px !important;
+    right: -30px !important;
+    top: -20px !important;
+    filter: blur(50px) !important;
+    opacity: 0.6 !important;
+  }
+
+  .glow-middle {
+    width: 240px !important;
+    height: 240px !important;
+    left: -30px !important;
+    filter: blur(50px) !important;
+    opacity: 0.5 !important;
+  }
+
+  .glow-bottom {
+    width: 240px !important;
+    height: 240px !important;
+    right: -30px !important;
+    filter: blur(50px) !important;
+    opacity: 0.5 !important;
+  }
+
+  /* ── Header Mobile ── */
+  .site-header {
+    padding: 0 14px !important;
+  }
+
+  .header-actions {
+    gap: 8px !important;
+  }
+
+  .btn-hire-me {
+    padding: 8px 14px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* ── Hero Section Mobile ── */
+  .hero-section {
+    padding: 30px 0 45px !important;
+  }
+
+  .hero-container {
+    gap: 24px !important;
+    padding: 0 16px !important;
+  }
+
+  .hero-visual {
+    margin: 0 auto 12px !important;
+    max-width: 300px !important;
+  }
+
+  .avatar-glow-orb {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .orb-pulse-ring {
+    inset: -10px !important;
+  }
+
+  .avatar-circle {
+    width: 175px !important;
+    height: 175px !important;
+    padding: 5px !important;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4), 0 0 35px rgba(244, 63, 94, 0.3) !important;
+  }
+
+  .floating-badge {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    font-size: 1rem !important;
   }
 
   .badge-react {
@@ -185,7 +414,7 @@ html, body {
     left: 2px !important;
   }
 
-  /* ── Hero Content Typography ── */
+  /* ── Typography & Buttons Mobile ── */
   .hero-greeting {
     font-size: 1rem !important;
     margin-bottom: 6px !important;
@@ -203,7 +432,6 @@ html, body {
     line-height: 1.65 !important;
     margin: 0 auto 24px !important;
     padding: 0 4px !important;
-    max-width: 100% !important;
   }
 
   .hero-actions {
@@ -224,9 +452,7 @@ html, body {
     flex-wrap: wrap !important;
     justify-content: center !important;
     gap: 14px !important;
-    max-width: 100% !important;
     padding-top: 18px !important;
-    margin: 0 auto !important;
   }
 
   .stat-item {
@@ -246,34 +472,22 @@ html, body {
     height: 24px !important;
   }
 
-  /* ── About Section (À Propos) ── */
+  /* ── About Section Mobile ── */
   .about-section {
     padding: 60px 0 !important;
-    overflow: hidden !important;
   }
 
   .about-container {
-    grid-template-columns: 1fr !important;
     gap: 35px !important;
-    text-align: center !important;
     padding: 0 16px !important;
-  }
-
-  .about-visual {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
   }
 
   .about-image-card {
     max-width: 310px !important;
     height: 370px !important;
-    margin: 0 auto !important;
   }
 
   .about-cta-row {
-    justify-content: center !important;
-    flex-wrap: wrap !important;
     gap: 10px !important;
     margin-top: 24px !important;
   }
@@ -284,21 +498,10 @@ html, body {
     justify-content: center !important;
   }
 
-  /* ── Skills & Projects ── */
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
-  }
-
+  /* ── Projects & Contact Mobile ── */
   .projects-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
-  }
-
-  /* ── Contact ── */
-  .contact-layout {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
   }
 
   .contact-form-panel {
@@ -311,40 +514,11 @@ html, body {
     gap: 14px !important;
     margin-bottom: 0 !important;
   }
-
-  /* ── Header Mobile ── */
-  .site-header {
-    padding: 0 14px !important;
-  }
-
-  .main-nav {
-    display: none !important;
-    position: absolute !important;
-    top: 68px !important;
-    left: 0 !important;
-    right: 0 !important;
-    background: #111827 !important;
-    flex-direction: column !important;
-    padding: 20px !important;
-    gap: 16px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
-  }
-
-  .main-nav.open {
-    display: flex !important;
-  }
-
-  .hamburger-btn {
-    display: flex !important;
-  }
-
-  .header-actions {
-    gap: 8px !important;
-  }
 }
 
-/* ── Extra Small Screens (≤ 420px) ── */
+/* ==========================================================================
+   3. EXTRA SMALL PHONES (≤ 420px)
+   ========================================================================== */
 @media (max-width: 420px) {
   .hero-title {
     font-size: 1.85rem !important;
@@ -381,5 +555,25 @@ html, body {
   .stat-item {
     width: 100% !important;
     margin-bottom: 6px !important;
+  }
+
+  .btn-hire-me span {
+    display: none !important;
+  }
+
+  .btn-hire-me {
+    padding: 8px 12px !important;
+  }
+}
+
+/* ── Menu Fade Animation ── */
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
